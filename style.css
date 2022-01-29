@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-cyan);
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: '';
+  width: 977px;
+  height: 977px;
+  background-image: url(./images/bg-pattern-top.svg);
+  display: block;
+  position: absolute;
+  right: calc(60vw - 114px);
+  top: -504px;
+}
+
+
+main::after{
+  content: '';
+  width: 977px;
+  height: 977px;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  display: block;
+  position: absolute;
+  left: calc(50vw - 30px);
+  top: 374px;
+}
+
+.card{
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  height: 376px;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.card__top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #E7E7E7;
+  padding-bottom: 25px;
+}
+
+.card__avatar{
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-top: -48px;
+}
+
+.card__title{
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+  margin-top: 22px;
+  font-weight: 700;
+}
+
+.card__title span{
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.card__city{
+  margin-top: 8px;
+  color: var(--dark-grayish-blue);
+  text-align: center;
+  font-size: 14px;
+}
+
+.card__measure-list{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 46px;
+}
+
+.card__measure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__measure-number{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card__measure-name{
+  font-size: 12px;
+  color: var(--dark-grayish-blue);
+}
